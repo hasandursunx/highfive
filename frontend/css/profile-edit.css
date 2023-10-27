@@ -1,0 +1,57 @@
+@import url(component.css);
+
+body{
+    background-color: var(--color-white-background);
+}
+
+/*PROFİLE EDITTT*/
+
+.profile-edit form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0px 100px 0px;
+}
+.profile-input{
+    width: 360px;
+    height: 40px;
+    border: 1px solid var(--color-blue-light-border);
+    padding: 12px 20px; 
+    color: var(--color-blue-dark);
+    margin-bottom: 40px;
+    border-radius: 2px;
+}
+.profile-input:focus{
+    border: 1px solid var(--color-blue-dark);
+}
+/*textare*/
+.profile-textarea{
+    width: 360px;
+    max-width: 360px;
+    border: 1px solid var(--color-blue-light-border);
+    padding: 12px 20px; 
+    color: var(--color-blue-dark);
+    margin-bottom: 40px;
+    border-radius: 2px;
+}
+.profile-input:focus{
+    border: 1px solid var(--color-blue-dark);
+}
+textarea:focus{
+    border: 1px solid var(--color-blue-dark);
+}
+
+
+.profile-edit button{
+    width: 200px;
+    height: 45px;
+    background-color: var( --color-green-light);
+    color: var(--color-white);
+    border-radius: 2px;
+    border: 1px solid var(--color-green-light-border);
+    cursor: pointer;
+    font-size: 18px;
+}
+.profile-edit button:hover{
+    background-color: var( --color-green-light-hover);
+}

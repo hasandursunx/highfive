@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/advert-detail.css">
+    <title> İlan Detay </title>
+</head>
+<body>
+    <!--HEADER-->
+    <%- include('partials/_header') %>
+    <!-- Category -->
+    <div class="explore-category-content">
+        <div id="explore-category">
+            <ul>
+                <li>
+                    <img src="/img/icon/navbar/navbar-1.svg" alt="">
+                    <a href="#">Grafik & Tasarım</a>
+                    <div class="explore-seperator"></div>
+                </li>
+                <li>
+                    <img src="/img/icon/navbar/navbar-2.svg" alt="">
+                    <a href="#">İnternet Reklamcılığı</a>
+                    <div class="explore-seperator"></div>
+
+                </li>
+                <li>
+                    <img src="/img/icon/navbar/navbar-3.svg" alt="">
+                    <a href="#">Yazı & Çeviri</a>
+                    <div class="explore-seperator"></div>
+
+                </li>
+                <li>
+                    <img src="/img/icon/navbar/navbar-4.svg" alt="">
+                    <a href="#">Video & Animasyon</a>
+                    <div class="explore-seperator"></div>
+
+                </li>
+                <li>
+                    <img src="/img/icon/navbar/navbar-5.svg" alt="">
+                    <a href="#">Ses & Müzik</a>
+                    <div class="explore-seperator"></div>
+                </li>
+                <li>
+                    <img src="/img/icon/navbar/navbar-6.svg" alt="">
+                    <a href="#">Yazılım & Teknoloji</a>
+                    <div class="explore-seperator"></div>
+                </li>
+                <li>
+                    <img src="/img/icon/navbar/navbar-7.svg" alt="">
+                    <a href="#">İş & Yönetim</a>
+                </li>
+            </ul>
+        </div>
+    </div> 
+    <!--advert - Title -->   
+    <div class="advert-title-div">
+        <h3><%= advert.title%> !</h3>
+        
+        <% if(!inFavorite) { %>
+        <!--ekle-->       
+        <a id="advert-title-favorite" href="/profile/<%= advert._id  %>/favorite?_method=PUT">
+            <img src="/img/icon/menu/favorite-0.png" alt="favori ekle">
+            <span>Favori Ekle</span>
+        </a>
+        <%} else  {%>
+        <!--sil-->
+        <a id="advert-title-favorite" href="/profile/<%= advert._id  %>/unfavorite?_method=PUT">
+            <img src="/img/icon/menu/favorite-0.png" alt="favori-sil">
+            <span>Favori Sil</span>
+        </a>
+        <% } %>
+    </div>
+    <div id="advert-detail-main">
+        <div id="advert-detail-left">
+            <div id="advert-detail-left-img">
+                <img src="/img/other/<%= advert.role === 'freelancer' ? 'ilan-1.jpg' : 'ilan-2.jpeg'  %>" alt="">
+            </div>
+            <div id="advert-detail-left-description">
+                <h2>İş ilanı Hakkında</h2>
+                <p>
+                    <%= advert.detail_long%>
+                    
+                </p>
+            </div>
+        </div>
+        <div id="advert-detail-right">
+            <div id="advert-detail-right-card">
+                <div id="advert-detail-right-card-top">
+                    <h3><%= advert.category %></h3>
+                    <h4><%= advert.detail_short%></h4>
+                    <div class="line"></div>
+                </div>
+                <div id="advert-detail-right-card-mid">
+                    <ul>
+                        <li>
+                            <img src="/img/icon/other/done-green.svg"alt="">
+                            <span>Güvenli Teslim</span>
+                        </li>
+                        <li>
+                            <img src="/img/icon/other/close-red.svg"alt="">
+                            <span>Revizyon hakkı yok.</span>
+                        </li>
+                        <li>
+                            <img src="/img/icon/other/timer.svg"alt="">
+                            <span>Teslim süresi 24 saat.</span>
+                        </li>
+                        <li>
+                            <img src="/img/icon/other/money.svg"alt="">
+                            <span>Ön ödemeli ilan.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div id="advert-detail-right-card-btm">
+
+                    <% if(advert.role === 'freelancer' ){ %>
+                        <a href="/profile/orders/<%= advert._id %>/<%= advert.user._id %>">Sipariş Ver</a>
+                    <%} else {%>
+                        <a href="/profile/offers/<%= advert._id %>/<%= advert.user._id %>">Teklif Ver</a>
+                    <%}%>
+                </div>
+                 <!--İlan Fiyat-->
+                 <div id="advert-detail-right-price">
+                    <div id="advert-detail-right-price-amount-div">
+                        <span id="advert-detail-right-price-amount"><%= advert.price_unit%></span> <span>TL</span>
+                    </div>
+                    <div id="advert-detail-right-price-type-div">
+                        <p id="advert-detail-right-price-type">
+                            <%= advert.price_type%>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="advert-detail-right-profile">
+                <div id="advert-detail-right-profile-top">
+                    <div id="advert-detail-right-profile-top-avatar">
+                        <img src="/img/avatar/profile-1.png" alt="">
+                    </div>
+                    <a href="/users/<%= advert.user._id %>" id="advert-detail-right-profile-top-name"> <%= advert.user.name + " " + " " + advert.user.surname %> </a>
+                    <div id="advert-detail-right-profile-top-job"><%= advert.user.job %></div>
+                    <div class="line"></div>
+                    <div id="advert-detail-right-profile-top-type-img">
+                        <img src="/img/avatar/<%= advert.role === 'freelancer' ? 'freelancer.png' : 'customer.png'%>" alt="">
+                    </div>
+                </div>
+                <div id="advert-detail-right-profile-mid">
+                    <ul>
+                        <li><img src="/img/icon/profile/birtday.svg" alt=""><span><%= advert.user.age %> Yaş</span></li>
+                        <li><img src="/img/icon/profile/experience.svg" alt=""><span><%= advert.user.experience_year %></span></li>
+                        <li><img src="/img/icon/profile/language.svg" alt=""><span><%= advert.user.language %></span></li>
+                        <li><img src="/img/icon/profile/hobi.svg" alt=""><span><%= advert.user.hobbies %></span></li>
+                    </ul> 
+                </div>
+                <div id="advert-detail-right-profile-btm"></div>
+            </div>
+        </div>
+    </div>
+    <!--FOOTER-->
+    <%- include('partials/_footer') %>
+</body>
+</html>

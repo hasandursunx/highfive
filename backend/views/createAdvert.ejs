@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İlan Oluştur</title>
+    <link rel="stylesheet" href="/css/createAdvert.css">
+
+</head>
+<body>
+     <!--HEADER-->
+    
+    <%- include('partials/_header') %>
+    
+     <!-- Boxes -->
+     <div id="create-div">
+        <form action="/profile/myadverts/createAdvert" method="post"> 
+            <select name="role" id="choose-rol">
+                <option  selected hidden  disabled value="">Rol Seç</option>
+                <option value="freelancer">Freelancer</option>
+                <option value="customer">Müşteri</option>
+            </select>
+           
+            <select name="category" id="choose-category">
+                <option  selected hidden  disabled value="">Kategori Seç</option>
+                <option value="Grafik & Tasarım">Grafik & Tasarım</option>
+                <option value="İnternet Reklamcılığı">İnternet Reklamcılığı</option>
+                <option value="Yazı & Çeviri">Yazı & Çeviri</option>
+                <option value="Video & Animasyon">Video & Animasyon</option>
+                <option value="Ses & Müzik">Ses & Müzik</option>
+                <option value="Yazılım & Teknoloji">Yazılım & Teknoloji</option>
+                <option value="İş & Yönetim">İş & Yönetim</option>
+            </select>
+
+            <input id="price" name="title" type="text" placeholder="Başlık"/>
+
+            <textarea name="detail_short" wrap="hard" id="tanim" cols="30" rows="10" placeholder="Kısa Açıklama"></textarea>
+            
+            <textarea name="detail_long" wrap="hard" id="tanim" cols="30" rows="10" placeholder="Uzun Açıklama"></textarea>
+
+            
+            <select name="price_type" id="choose-price-type">
+                <option  selected hidden  disabled value="">Fiyatlandırma Türü Seç</option>
+                <option value="Dakikalık">Dakikalık</option>
+                <option value="Saatlik">Saatlik</option>
+                <option value="Günlük">Günlük</option>
+                <option value="Adet">Adet</option>
+                <option value="Diğer">Diğer</option>
+
+            </select>
+
+            <input id="price" name="price_unit" type="text" placeholder="Fiyat"/>
+
+            
+            <button id="olustur_butonu" type="submit">Oluştur</button>
+            
+            
+
+        </form>
+    </div>
+</body>
+</html>

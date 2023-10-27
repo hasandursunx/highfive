@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/orders.css">
+    <title>Siparişlerim</title>
+</head>
+<body>
+    <!--HEADER-->
+    <%- include('partials/_header') %>
+    <div class="to-orders">
+        <%for(order of orders){%>
+        <div class="to-order-card">
+            <div class="to-order-card-profile">
+                <img src="/img/avatar/profile-1.png" alt="">
+                <a href="/pages/profile.html"><%= order.owner.name + " " + " " + order.owner.surname  %></a>
+            </div>
+            <div class="to-order-card-advert">
+                <h4 class="to-order-card-advert-title"><%= order.advert.title %></h4>
+                <p class="to-order-card-advert-description">
+                    <%= order.advert.detail_long %> 
+                </p>
+            </div>
+            <div class="to-order-card-order-status">
+                <img src="/img/icon/other/status-wait.png" alt="">
+                <span>Devam Ediyor</span>
+            </div>
+            <div class="to-order-card-buttons">
+                <a class="to-order-card-button-detail" href="/profile/order/detail/<%= order._id %>">Sipariş Detay</a>
+                <a class="to-order-card-button-cancel" href="#">İptal</a>
+            </div>
+        </div>
+        <%}%>
+    </div>
+   
+</body>
+</html>

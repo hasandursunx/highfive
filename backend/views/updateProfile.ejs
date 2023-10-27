@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/updateProfile.css">
+    <title>PROFİL DÜZENLE</title>
+</head>
+<body>
+    <!--HEADER-->
+    <%- include('partials/_header') %>
+    <div class="profile-edit">
+        <form action="updateProfile" method="POST">
+            <input value="<%= user.email %>" name="email" type="email" class="profile-input" placeholder="E-Mail">
+            <input value="<%= user.name %>" name="name" type="text" class="profile-input" placeholder="İsim">
+            <input value="<%= user.surname %>" name="surname" type="text" class="profile-input" placeholder="Soyisim">
+            <input value="<%= user.age %>" name="age" type="number" min="18" class="profile-input" placeholder="Yaş">
+            <input value="<%= user.gender %>" name="gender" type="text" class="profile-input" placeholder="Cinsiyet">
+            <input value="<%= user.language %>" name="language" type="text" class="profile-input" placeholder="Dil">
+            <input value="<%= user.job %>" name="job" type="text" class="profile-input" placeholder="Meslek">
+            <input value="<%= user.experience_year %>" name="experience_year" type="text"  class="profile-input" placeholder="Deneyim">
+            <textarea  class="profile-textarea "name="talents" id="" cols="30" rows="3" placeholder="Yetenekler"><%= user.talents %></textarea>
+            <textarea  class="profile-textarea "name="certificates" id="" cols="30" rows="5" placeholder="Sertifikalar"><%= user.certificates %></textarea>
+            <textarea  class="profile-textarea "name="hobbies" id="" cols cols="30" rows="3" placeholder="Hobiler"><%= user.hobbies %></textarea>
+            <textarea  class="profile-textarea "name="aboutme" id="" cols cols="30" rows="3" placeholder="Hakkımda"><%= user.aboutme %></textarea>
+
+            <button>Güncelle</button>                  
+        </form>
+    </div>
+</body>
+</html>

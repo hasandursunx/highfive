@@ -1,0 +1,264 @@
+@import url(settings.css);
+
+/* ------------------- HEADER --------------------------------- */
+
+.header{
+    width: 100%;
+    height: 60px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+    padding: 10px 55px;
+    background-color: var(--color-white);
+    /* Hizalama */
+    display: flex;
+    justify-content: space-between;
+    
+}
+#header-logo{
+    width: 120px;
+    height: 40px;
+}
+#header-title{
+    font-size: 25px;
+    color: var(--color-black);
+    line-height: 40px;
+}
+#header-list li{
+    display: inline;
+    margin-left: 10px;
+}
+#header-list  li:first-child{
+    margin-left: 0px;
+}
+#header-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#header-links a{
+    color: #4B4F52;
+    font-weight: 400;
+    font-size: 20px;   
+}
+#header-links a:hover
+{
+    color: var(--color-black);  
+}
+
+#header-list  li:last-child{
+    display: inline-block;
+}
+#header-links-register a{
+    display: inline-block;
+    width: 120px;
+    height: 40px;
+    background-color: var(--color-green-light);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    line-height:    40px;
+    text-align: center;
+    border-radius: 2px;
+}
+#header-links-register a:hover{
+    color: var(--color-white);
+}
+#header-links-register:hover a{
+    background-color: var(--color-green-light-hover);
+}
+
+
+/*------------------ DROPDOWN LİST -----------*/
+
+#header-links{
+    display: none;
+}
+.header-dropdown-menu{
+    position: relative;
+}
+
+.header-dropdown-close a{
+    width: 200px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+
+}
+.header-dropdown-close img:first-child{
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+}
+
+.header-dropdown-close img:last-child{
+    width: 10px;
+    height: 10px;
+    margin-left: auto;
+    
+}
+.header-dropdown-close div{
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--color-blue-dark);
+}
+.header-dropdown-open{
+    display: none;
+    border-radius: 5px;
+    width: 200px;
+    background-color: var(--color-blue-light-dropdown);
+    position: absolute;
+    top: 40px;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.25) ;
+}
+.header-dropdown-open:hover{
+    border-radius: 5px;
+    overflow: hidden;
+}
+.header-dropdown-open ul{
+    display: flex;
+    flex-direction: column;
+}
+
+.header-dropdown-open ul li a{
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--color-blue-dark);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    padding: 5px 10px;
+}
+
+.header-dropdown-open ul li a:hover{
+    background-color: var(--color-blue-light-border);
+}
+
+.header-dropdown-open ul li a img{
+    width: 20px;
+    height: 20px;
+    margin-right: 7px;
+}
+
+.header-dropdown-close:hover + div  {
+    display: block;
+}
+.header-dropdown-open:hover{
+    display: block;
+}
+/*----------------------------------------------------*/
+
+/*---------------------- HEADER - SEARCH ---------------------------*/
+#header-search-button{
+    background-color: transparent;
+    cursor:pointer;
+}
+#header-search-button img{
+    width: 15px;
+}
+#header-search-textbox{
+    border-bottom: 1px  solid var(--color-blue-light-text);
+    background: url(/img/icon/other/search.svg) 2.5% center no-repeat;
+    padding: 10px 10px 10px 40px;
+    height: 40px;
+    width: 450px;
+    font-size: 17px;
+    font-weight: 300;
+    color: var(--color-blue-dark);
+    line-height: 20px;
+}
+#header-search-textbox:focus{
+    border-bottom: 1px  solid var(--color-blue-light);
+}
+/*------------------------------------------------------------------------
+
+
+
+
+
+/* ------------------------------------------------------------------------
+
+/*-----------------Footer----------------------*/
+.footer{
+    padding: 35px 120px  10px 120px;
+    background-color: var(--color-blue-dark);
+}
+#footer-top{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+#footer-logo img{
+    width: 180px;
+    
+}
+#footer-top div ul li{
+    margin-bottom: 15px;
+}
+#footer-top div ul li a{
+    color: var(--color-blue-light-text);
+}
+#footer-top div ul li a:hover{
+    text-decoration: underline;
+}
+#footer-bottom ul{
+    display: flex;
+    justify-content: space-between;
+
+}
+#footer-bottom ul li a{
+    color: var(--color-blue-light);
+    font-size: 16px;
+}
+#footer-bottom ul li a:hover{
+    text-decoration: underline;
+}
+
+/*--------------Category-------------*/
+
+#explore-category{
+    padding: 0px 120px;
+    height: 70px;
+    background-color: var(--color-white-background);
+    display: flex;
+    align-items: center;
+    min-width: 100%;
+}
+
+#explore-category ul {
+     display: flex;
+     height: 100%;
+}
+
+#explore-category ul li{
+    display: flex;
+    align-items: center;
+}
+
+#explore-category ul li img{
+    width:20px;
+    height: 20px;
+}
+#explore-category ul li a{
+    color: var(--color-blue-light);
+    margin-left: 6px;
+    font-size: 16px;
+}
+
+#explore-category ul li a:hover{
+    color: var(--color-blue-dark);
+}
+.explore-seperator{
+    width: 1px;
+    height: 100%;
+    background-color: var(--color-blue-light-text);
+    margin: 0px 20px;
+}
+
+/* DİĞER LİNE */
+.line{
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-blue-light-border);
+}

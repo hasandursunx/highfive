@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/profile.css">
+    <title>Profil</title>
+</head>
+<body>
+    <!--HEADER-->
+    <%- include('partials/_header') %>
+    
+    <!--PROFİLE-->
+    <div class="profile">
+        <div id="profile-left">
+            <div id="profile-left-profile">
+                <div id="profile-left-profile-top">
+                    <div id="profile-left-profile-top-avatar">
+                        <img src="/img/avatar/profile-1.png" alt="">
+                    </div>
+                    <a href="#" id="profile-left-profile-top-name"><%= user.name + " " + " " + user.surname%></a>
+                    <div id="profile-left-profile-top-job"><%= user.job %></div>
+                    <div class="line"></div>
+                </div>
+                <div id="profile-left-profile-mid">
+                    <ul>
+                        <li><img src="/img/icon/profile/gender.svg" alt=""><span><%= user.gender %></span></li>
+                        <li><img src="/img/icon/profile/birtday.svg" alt=""><span><%= user.age %> </span></li>
+                        <li><img src="/img/icon/profile/language.svg" alt=""><span><%= user.language %></span></li>
+                        <li><img src="/img/icon/profile/username.svg" alt=""><span><%= user.username %></span></li>
+                        <li><img src="/img/icon/profile/email.svg" alt=""><span> <%= user.email  %> </span></li>
+                    </ul> 
+                </div>
+            </div>
+            <div id="profile-left-buttons">
+                <a href="/profile/updateProfile" id="profile-left-button-profile-edit">Profil Düzenle</a>
+                <a href="/profile/updatePassword" id="profile-left-button-password-edit">Şifre Güncelle</a>
+            </div>
+            <div id="profile-left-career"></div>
+        </div>
+        <div id="profile-right">
+            <div id="profile-right-about">
+                <h3>Hakkımda</h3>
+                <p style="overflow-wrap: break-word;">
+                   
+                    <%= user.aboutme %>
+                    
+                </p>
+            </div>
+            <div id="profile-right-profile-detail">
+                <ul id="profile-right-profile-detail-left">
+                    <li style="overflow-wrap: break-word;"><span>Meslek : </span> <%= user.job %></p></li>
+                    <li style="overflow-wrap: break-word;"><span>Deneyim : </span>  <%= user.experience_year %></li>
+                    <li style="overflow-wrap: break-word;"><span>Yetenekler : </span> <%= user.talents %> </li>
+                    <li style="overflow-wrap: break-word;"><span>Sertifikalar : </span>  <%= user.certificates %></p> </li>
+                    <li style="overflow-wrap: break-word;"> <span>Hobiler : </span>   <%= user.hobbies %> </li>
+                </ul> 
+            </div>
+        </div>
+    </div>
+</body>
+</html>

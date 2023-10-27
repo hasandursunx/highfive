@@ -1,0 +1,101 @@
+@import url(component.css);
+
+.footer{
+ 
+    margin-top: 250px;
+}
+
+.header {
+    align-items: center;
+    justify-content: center;
+}
+
+#login-div form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+#login-div{
+    margin-top: 100px;
+}
+#password-forgot{
+    width: 365px;
+    height: 41px;
+    display:flex ;
+    justify-content: end;
+}
+
+
+
+
+#mail{
+    border-radius: 2px;
+    border: 1px solid #bfc8d2;
+    width: 365px;
+    height: 41px;
+    padding: 9px 10px 11px;
+    color: #2d3640;
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 30px;
+    transition: 0.5s border;
+
+}
+#mail:focus{
+    border-color: var(--color-blue-dark);
+}
+#sifre{
+    border-radius: 2px;;
+    border: 1px solid #bfc8d2;
+    width: 365px;
+    height: 41px;
+    padding: 9px 10px 11px;
+    color: #2d3640;
+    font-weight: 400;
+    font-size: 16px;
+    transition: 0.5s border;
+
+}
+#sifre:focus{
+    border-color: var(--color-blue-dark);
+}
+#giris_butonu{
+    border-radius: 2px;
+    height: 41px;
+    width: 200px;
+    background-color: var(--color-green-light);
+    color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+    
+}
+#giris_butonu:hover{
+    background-color: var(--color-green-light-hover);
+}
+
+#s_unuttum {
+    color: var(--color-blue-dark);
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 5px;
+
+}
+
+#kaydoll{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-blue-dark);
+    margin-top: 20px;
+    cursor: pointer;
+}
+#yazı{
+    color: var( --color-blue-light);
+}
+#kaydol:hover{
+    text-decoration: underline;
+}
+#s_unuttum:hover {
+    text-decoration: underline;
+}

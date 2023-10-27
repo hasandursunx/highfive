@@ -1,0 +1,144 @@
+@import url(component.css);
+
+.header {
+    align-items: center;
+    justify-content: center;
+}
+
+#register-div form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#register-div{
+    margin-top: 100px;
+}
+
+#isim{
+    border-radius: 2px;
+    border: 1px solid #bfc8d2;
+    width: 170px;
+    height: 41px;
+    padding: 9px 10px 11px;
+    color: #2d3640;
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 30px;
+    transition: 0.5s border;
+    margin-right: 20px;
+
+}
+#isim:focus{
+    border-color: var(--color-blue-dark);
+}
+
+#soyad{
+    border-radius: 2px;
+    border: 1px solid #bfc8d2;
+    width: 170px;
+    height: 41px;
+    padding: 9px 10px 11px;
+    color: #2d3640;
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 30px;
+    transition: 0.5s border;
+
+}
+#soyad:focus{
+    border-color: var(--color-blue-dark);
+}
+
+#k-adi{
+    border-radius: 2px;
+    border: 1px solid #bfc8d2;
+    width: 365px;
+    height: 41px;
+    padding: 9px 10px 11px;
+    color: #2d3640;
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 30px;
+    transition: 0.5s border;
+
+}
+#k-adi:focus{
+    border-color: var(--color-blue-dark);
+}
+
+#k-adi:focus{
+    border-color: var(--color-blue-dark);
+}
+
+
+#mail{
+    border-radius: 2px;
+    border: 1px solid #bfc8d2;
+    width: 365px;
+    height: 41px;
+    padding: 9px 10px 11px;
+    color: #2d3640;
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 30px;
+    transition: 0.5s border;
+
+}
+#mail:focus{
+    border-color: var(--color-blue-dark);
+}
+#sifre{
+    border-radius: 2px;;
+    border: 1px solid #bfc8d2;
+    width: 365px;
+    height: 41px;
+    padding: 9px 10px 11px;
+    color: #2d3640;
+    font-weight: 400;
+    font-size: 16px;
+    transition: 0.5s border;
+    margin-bottom: 30px;
+
+}
+#sifre:focus{
+    border-color: var(--color-blue-dark);
+}
+#kaydol-butonu{
+    border-radius: 2px;
+    height: 41px;
+    width: 200px;
+    background-color: var(--color-green-light);
+    color: #fff;
+    cursor: pointer;
+    margin-top: 30px;
+    font-size: 15px;
+    
+}
+#kaydol-butonu:hover{
+    background-color: var(--color-green-light-hover);
+}
+
+#giris-div{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-blue-dark);
+    margin-top: 20px;
+}
+#giris_yap{
+    cursor: pointer;
+}
+#yazı1{
+    font-size: 13px;
+    color: var(--color-blue-lighterr);
+
+}
+#yazı1 b {
+    color: var(--color-blue-lighter);
+}
+#yazı2{
+    color: var( --color-blue-lighterr);
+}
+#giris_yap:hover{
+    text-decoration: underline;
+}

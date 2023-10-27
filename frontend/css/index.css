@@ -1,0 +1,124 @@
+@import url(component.css);
+
+/* ------------------- HEADER EXTRA --------------------------------- */
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* ----------------------- INTRODUCTION -----------------------------*/
+
+.introduction{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#slogan-1{
+    font-size: 52px;
+    font-weight: 300;
+    color: var(--color-blue-dark);
+    margin-top: 190px;
+}
+
+#slogan-2{
+    font-size: 52px;
+    font-weight: 600;
+    color: var(--color-blue-dark);
+}
+
+#slogan-sub{
+    font-size: 22px;
+    font-weight: 300;
+    color: var(--color-blue-light);
+    margin: 35px 0px 70px 0px;
+    max-width: 758px;
+    text-align: justify;
+    line-height: 1.1;
+}
+#direct-link{
+    display: block;
+    width: 250px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: var(--color-red);
+    color: var(--color-white);
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 100px;
+    text-align: center;
+    line-height: 50px ;
+}
+#direct-link:hover{
+    background-color: var(--color-red-hover);
+}
+
+/*---------------------- CARDS ---------------------- */
+.presentation-card-content {
+    padding: 0px 120px 100px 120px;
+}
+/* ///////// CARD TİTLE ///////// */
+#presentation-card-title{
+    font-size: 42px;
+    font-weight: 300;
+    color: var(--color-blue-dark);
+}
+
+#presentation-card-header{
+    text-align: center;
+}
+
+#presentation-card-title span{
+    font-weight: 600;
+}
+
+#presentation-card-caption{
+    font-size: 22px;
+    font-weight: 300;
+    color: var(--color-blue-light);
+    margin-bottom: 40px;
+}
+
+
+/* ///////// CARD ///////// */
+
+.pre-cards{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    align-items: center;
+}
+
+.pre-card{
+    max-width: 370px;
+    height: 442px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.pre-card-img{
+    width: 320px;
+    height: 200px;
+}
+
+.pre-card-title{
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--color-blue-dark);
+    text-align: center;
+    margin: 22px 0px 20px 0px;
+}
+.pre-card-description{
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--color-blue-light);
+    text-align: justify;
+    line-height: 1.44;
+}
+
+

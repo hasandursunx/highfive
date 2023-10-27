@@ -1,0 +1,40 @@
+/* Google font'u dahil edildi.*/
+@import url('https://fonts.cdnfonts.com/css/sofia-pro');
+
+/*Reset CSS*/
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
+    font-family: 'Sofia Pro', sans-serif;
+  }
+  *:focus{
+    outline: 0;
+  }
+  a{
+    color: #2D3640;
+  }
+  /* ------------------ COLOR -------------- */ 
+  :root{
+    --color-blue-dark: #2D3640;
+    --color-blue-light: #8B95A1;
+    --color-red : #E63262;
+    --color-red-hover : #c53b5f;
+    --color-white : #FFFFFF;
+    --color-white-background: #F4F5F7;
+    --color-black : #000;
+    --color-green-light : #26ca9a;
+    --color-green-light-hover : #1fa17a;
+    
+    --color-blue-light-text: #d2dbe4;
+    --color-blue-light-border: #BFC8D2;
+    --color-blue-light-dropdown: #EAEDF2;
+    --color-blue-light-card: #4B4F52;
+   
+
+  }
+

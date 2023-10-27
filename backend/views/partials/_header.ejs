@@ -1,0 +1,55 @@
+<div class="header">
+    <a href="/adverts" id="header-logo-link">
+        <img id="header-logo" src="/img/logo/high-five-logo-E63262.png" alt="Bu logodur.">
+    </a>
+    <div id="header-search">
+        <form action="/adverts/search" method="POST">
+            <input name="searchAdvert" id="header-search-textbox" type="search" autocomplete="off" placeholder="Arama...">
+        </form>
+    </div>
+    <!-- HEADER LİNKLER XYZ-->
+    <div id="header-links">
+        <ul id="header-list">
+            <li id="header-links-homepage">
+                <a href="/pages/explore.html">Keşfet</a>
+            </li>
+            <li id="header-links-login"><a href="/pages/login.html">Giriş Yap</a></li>
+            <li id="header-links-register"><a href="/pages/register.html">Kaydol</a></li>
+        </ul>
+    </div>
+    <!--HEADER DROPDOWN LİST XYZ-->
+    <% if(user){%>
+    <div class="header-dropdown-menu">
+        <div class="header-dropdown-close">
+            <a href="#">
+                <img src="/img/avatar/profile-1.png" alt="profil avatar">
+                <div><%=  user.name + " " + " " + user.surname %></div>
+                <img src="/img/icon/other/down-arrow.svg" alt="aşağı yön ikonu">
+            </a>
+        </div>
+        <div class="header-dropdown-open">
+            <ul>
+                <li><a href="/profile"><img src="/img/icon/menu/profile.svg" alt=""><span>Profil</span></a></li>
+                <li><a href="/profile/myadverts/createAdvert"><img src="/img/icon/menu/add.svg" alt=""><span>İlan Oluştur</span></a></li>
+                <li><a href="/profile/myadverts"><img src="/img/icon/menu/adv-erts.svg" alt=""><span>İlanlarım</span></a></li>
+                <li><a href="/profile/orders"><img src="/img/icon/menu/basket.svg" alt=""><span>Siparişlerim</span></a></li>
+                <li><a href="/profile/offers"><img src="/img/icon/menu/offer.svg" alt=""><span>Tekliflerim</span></a></li>
+                <li><a href="/profile/favorites"><img src="/img/icon/menu/favorite.svg" alt=""><span>Favoriler</span></a></li>
+                <li><a href="/logout"><img src="/img/icon/menu/out.svg" alt=""><span>Oturum Kapat</span></a></li>
+            </ul>
+        </div>
+    </div>
+    <%} else{%>
+    <!--NO USER LİNKS-->
+    <div id="header-links" style="display: block !important;">
+        <ul id="header-list">
+            <li id="header-links-homepage">
+                <a href="/adverts">Keşfet</a>
+            </li>
+            <li id="header-links-login"><a href="/login">Giriş Yap</a></li>
+            <li id="header-links-register"><a href="/register">Kaydol</a></li>
+        </ul>
+    </div>
+    <%}%>
+
+</div>

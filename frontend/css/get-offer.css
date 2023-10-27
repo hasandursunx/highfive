@@ -1,0 +1,160 @@
+@import url(component.css);
+
+body{
+    background-color: var(--color-white-background);
+}
+.get-offer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+.get-offer-card{
+    background-color: var(--color-white);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25) ;
+}
+.get-offer-card-top{
+    border-bottom: 1px solid var(--color-blue-light-border);
+    display: flex;
+}
+/*1*/
+.get-offer-card-profile{
+    width: 190px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.get-offer-card-profile img{
+    width: 60px;
+    height: 60px;
+    margin-bottom: 5px;
+
+}
+.get-offer-card-profile a{
+    font-size: 1x;
+    font-weight: 600;
+    color: var(--color-blue-dark);
+}
+.get-offer-card-profile a:hover{
+    text-decoration: underline;
+}
+/*2*/
+.get-offer-card-advert-mid{
+    width: 620px;
+    height: 100px;
+    border-right: 1px solid var(--color-blue-light-border);
+    border-left: 1px solid var(--color-blue-light-border);
+    padding: 10px;
+}
+.get-offer-card-advert-mid-title{
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--color-blue-dark);
+    margin-bottom: 3px;
+}
+.get-offer-card-advert-mid-description{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-blue-light);
+}
+/*3*/
+.get-offer-card-price{
+    border-right: 1px solid var(--color-blue-light-border);
+}
+.get-offer-card-price{
+    width: 150px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.get-offer-card-advert-calculation{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-blue-dark);
+}
+.get-offer-card-advert-price{
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--color-green-light);
+}
+/*4*/
+.get-offer-card-buttons-status{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 250px;
+}
+.get-offer-card-order-status{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.get-offer-card-order-status span{
+    margin-left: 3px;
+}
+.get-offer-card-buttons{
+    display: flex;
+}
+.get-offer-card-buttons a{
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-white);
+    width: 90px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    border-radius: 5px;
+}
+.get-offer-card-button-detail{
+    background-color: var(--color-green-light);
+    margin-right: 8px;
+
+}
+.get-offer-card-button-cancel{
+    background-color: var(--color-red);
+}
+.get-offer-card-button-detail:hover{
+    background-color: var(--color-green-light-hover);
+}
+.get-offer-card-button-cancel:hover{
+    background-color: var(--color-red-hover);
+}
+/*5*/
+.get-offer-card-btm{
+    padding: 13px 25px;
+    position: relative;
+    min-height: 150px;
+}
+.get-offer-card-btm-title{
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--color-blue-dark);
+    margin-bottom: 6px;
+}
+.get-offer-card-btm-description{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-blue-light);
+    max-width: 800px;
+
+}
+.get-offer-card-btm-date{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-blue-light);
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+}

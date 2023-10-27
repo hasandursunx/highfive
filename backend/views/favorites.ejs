@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favoriler</title>
+    <link rel="stylesheet" href="/css/favorites.css">
+
+</head>
+<body>
+      <!--HEADER-->
+
+      <%- include('partials/_header') %>
+    
+    
+    
+    <div class="main-favorite">
+       <div class="favorite-cards">
+        <!--favori-1-->
+        <% for(favorite of user.favorites) {%>
+            <div class="favorite-card">
+                <div class="favorite-card-top">
+                    <div class="advert-card-avatar-img">
+                        <img style="width: 32px; height: 32px;" src="/img/avatar/<%= favorite.role === 'freelancer' ? 'freelancer.png' : 'customer.png'%>" alt="">
+                    </div>
+                    <div class="favorite-card-top-profile">
+                        <img src="/img/avatar/profile-1.png" alt="">
+                        <div class="favorite-card-top-profile-text">
+                            <a href="/adverts/<%= favorite._id %>"><%= favorite.title %></a>
+                            <span><%= favorite.category %></span>
+                        </div>
+                    </div>
+                    
+
+                </div>
+
+                <div class="favorite-card-mid">
+                    <img src="/img/other/ilan-2.jpeg" alt="">
+
+                </div>
+
+                <div class="favorite-card-bottom">
+                    <a href="/profile/<%= favorite._id %>/unfavorite?_method=PUT" id="kaldir" >Kaldır</a>
+                </div>
+            </div>
+            <%}%>
+            
+       </div>
+    </div>
+
+</body>
+</html>

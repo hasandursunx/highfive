@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/explore.css">
+    <title>Keşfet</title>
+</head>
+<body>
+    <!--HEADER-->
+    
+    <%- include('partials/_header') %>
+
+    <!-- Category -->
+    
+
+    <%- include('partials/_category') %>
+
+    <div class="filter">
+        <form action="/adverts/filter" method="POST">
+                <select name="categoryFilter" id="filter-category">
+                    <option  selected hidden  disabled >Kategori</option>
+                    <option value="Grafik & Tasarım">Grafik & Tasarım</option>
+                    <option value="İnternet Reklamcılığı">İnternet Reklamcılığı</option>
+                    <option value="Yazı & Çeviri">Yazı & Çeviri</option>
+                    <option value="Video & Animasyon">Video & Animasyon</option>
+                    <option value="Ses & Müzik">Ses & Müzik</option>
+                    <option value="Yazılım & Teknoloji">Yazılım & Teknoloji</option>
+                    <option value="İş & Yönetim">İş & Yönetim</option>
+                </select>
+
+                <select name="roleFilter" id="filter-advert-type">
+                    <option  selected hidden  disabled >İlan Türü</option>
+                    <option value="freelancer">Hizmet Verenler</option>
+                    <option value="customer">Hizmet Bekleyenler</option>
+                </select>
+
+                <select name="price_typeFilter" id="filter-price-type">
+                    <option  selected hidden  disabled >Fiyat Türü</option>
+                    <option value="Dakikalık">Dakikalık</option>
+                    <option value="Saatlik">Saatlik</option>
+                    <option value="Günlük">Günlük</option>
+                    <option value="Adet">Adet</option>
+                    <option value="Diğer">Diğer</option>
+                </select>
+
+                <label id="min-price-text" for="min-price-textbox">Fiyat Aralığı :</label>
+                <input name="minPriceFilter" autocomplete="off" id="min-price-textbox" type="text">
+                <label  id="max-price-text" for="max-price-textbox"> - </label>
+                <input name="maxPriceFilter" autocomplete="off" id="max-price-textbox" type="text" >
+                <button >Uygula</button>
+        </form>
+    </div>
+    <div class="main">
+        <div class="advert-cards">
+
+            <!--Sipariş Ver Card-->
+            <% for(advert of adverts) {%>
+            <div class="advert-card">
+                <div class="advert-card-img">
+                    <img class="advert-card-big-img" src="/img/other/<%= advert.role === 'freelancer' ? 'ilan-1.jpg' : 'ilan-2.jpeg'  %>" alt="freelancer ian resmi">
+                    <div class="advert-card-avatar-img">
+                        <img src="/img/avatar/<%= advert.role === 'freelancer' ? 'freelancer.png' : 'customer.png'%>" alt="">
+                    </div>
+                </div>
+                <div class="advert-card-profile">
+                    <div class="advert-card-profile-name">
+                        <img src="/img/avatar/profile-1.png" alt="profil resmi">
+                        <div class="advert-card-profile-info">
+                            <a href="/users/<%= advert.user._id %>"><%= advert.user.name + " " + " " + advert.user.surname %></a>
+                            <p><%= advert.user.job %></p>
+                        </div>
+                    </div>
+                    <div class="advert-card-profile-price">
+                        <p class="advert-card-profile-price-amount"><%= advert.price_unit%><span>TL</span></p>
+                        <p class="advert-card-profile-price-type"><%= advert.price_type%></p>
+                    </div>
+                </div>
+                <div class="advert-card-text">
+                    <p style="font-weight: 800;"><%= advert.title%></p>
+                    <p><%= advert.detail_long%></p>
+                </div>
+                <div class="advert-card-button">
+                    <a href="/adverts/<%= advert._id %>">
+                        <% if(advert.role === 'freelancer' ){ %>
+                            <span>Sipariş Ver</span>
+                            <img src="/img/icon/menu/basket.svg" alt="">
+                        <%} else {%>
+                            <span>Teklif Ver</span>
+                            <img src="/img/icon/menu/offer.svg" alt="">
+                        <%}%>
+                    </a>
+                </div>
+            </div>
+            <%}%>
+
+
+            <!--Teklif Ver Card-->
+            <!-- <div class="advert-card">
+                <div class="advert-card-img">
+                    <img class="advert-card-big-img" src="/img/other/ilan-2.jpeg" alt="freelancer ian resmi">
+                    <div class="advert-card-avatar-img">
+                        <img src="/img/avatar/customer.png" alt="freelancer logosu">
+                    </div>
+                </div>
+                <div class="advert-card-profile">
+                    <div class="advert-card-profile-name">
+                        <img src="/img/avatar/profile-1.png" alt="profil resmi">
+                        <div class="advert-card-profile-info">
+                            <a href="#">Leyli Hudayberdiyeva</a>
+                            <p>Halkla İlişkiler Uzmanı</p>
+                        </div>
+                    </div>
+                    <div class="advert-card-profile-price">
+                        <p class="advert-card-profile-price-amount">1000<span>TL</span></p>
+                        <p class="advert-card-profile-price-type">Günlük</p>
+                    </div>
+                </div>
+                <div class="advert-card-text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, unde et! Ea a at, accusamus quae beatae doloribus, vitae ipsa, possimus vero dolore quas molestiae! </p>
+                </div>
+                <div class="advert-card-button">
+                    <a href="/pages/customer-advert.html">
+                        <span>Teklif Ver</span>
+                        <img src="/img/icon/menu/offer.svg" alt="">
+                    </a>
+                </div>
+            </div> -->
+            
+            
+        </div>
+    </div>
+    <!--FOOTER-->
+    <%- include('partials/_footer') %>
+</body>
+</html>

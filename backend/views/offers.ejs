@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/offers.css">
+    <title>Tekliflerim</title>
+</head>
+<body>
+    <!--HEADER-->
+    <%- include('partials/_header') %>
+
+    
+    <div class="to-offers">
+        <%for(offer of offers){%>
+        <div class="to-offer-card">
+            <div class="to-offer-card-profile">
+                <img src="/img/avatar/profile-1.png" alt="">
+                <a href="/pages/profile.html"><%= offer.owner.name + " " + " " + offer.owner.surname  %></a>
+            </div>
+            <div class="to-offer-card-advert">
+                <h4 class="to-offer-card-advert-title"><%= offer.title %></h4>
+                <p class="to-offer-card-advert-description">
+                    <%= offer.description %> 
+                </p>
+            </div>
+            <div class="to-offer-card-price">
+                <span class="to-offer-card-advert-calculation"><%- offer.price_unit_count %> <%= (offer.price_type === 'Dakikalık')  ?  'dakika'   :  (offer.price_type === 'Günlük') ? 'Gün' : (offer.price_type)  %> x <%= offer.price_unit %> TL</span>
+                <span class="to-offer-card-advert-price"><%-  offer.price_unit_count * offer.price_unit %>TL</span>
+            </div>
+            <div class="to-offer-card-buttons">
+                <div class="to-offer-card-order-status">
+                    <img src="/img/icon/other/status-wait.png" alt="">
+                    <span>Devam Ediyor</span>
+                </div>
+                <a class="to-offer-card-button-cancel" href="#">İptal</a>
+            </div>
+        </div>
+        <%}%>
+        <!--2-->
+    </div>
+   
+</body>
+</html>

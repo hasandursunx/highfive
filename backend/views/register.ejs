@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaydol</title>
+    <link rel="stylesheet" href="/css/register.css">
+
+</head>
+<body>
+     <!-- Header -->
+     <div class="header">
+        <a href="/advert" id="header-logo-link">
+            <img id="header-logo" src="/img/logo/high-five-logo-E63262.png" alt="Bu logodur.">
+        </a>
+    </div>
+
+
+    <!-- Boxes -->
+    <div id="register-div">
+        <form action="users/register" method="POST"> 
+
+            <div id="ad-soyad">
+            
+                <input id="isim" name="name" type="text" placeholder="İsim"/>
+                
+                <input id="soyad" name="surname"  type="text" placeholder="Soy İsim"/>
+
+            </div>
+
+            <input id="k-adi" name="username" type="text" placeholder="Kullanıcı Adı"/>
+
+            <input id="mail" name="email" type="email" placeholder="E-posta"/>
+           
+            <input id="sifre" name="password" type="password" placeholder="Şifre"/>
+
+            <div id="yazı1-div">
+                <a id="yazı1">Kaydol'a basarak <b>Kullanıcı Sözleşmesi</b>  ve <b>Gizlilik Sözleşmesini</b>  kabul ediyorum.
+                </a>
+            </div>
+           
+            <button id="kaydol-butonu" > Kayıt Ol</button>
+            
+            <div id="giris-div">
+                <a id="yazı2">Zaten bir hesabın var mı?</a>
+                <a href="/login" id="giris_yap">Giriş Yap</a>
+            </div>
+
+        </form>
+    </div>
+</body>
+</html>

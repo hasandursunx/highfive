@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İlan Düzenle</title>
+    <link rel="stylesheet" href="/css/updateAdvert.css">
+
+</head>
+<body>
+     <!--HEADER-->
+     <!--HEADER-->
+    
+    <%- include('partials/_header') %>
+
+     <!-- Boxes -->
+     <div id="create-div">
+        <form action="/profile/myadverts/<%= advert.id %>?_method=PUT" method="POST"> 
+            <select name="role" id="choose-rol">
+                <option   hidden  disabled value="">Rol Seç</option>
+                <option <%= advert.role === 'freelancer' ? 'selected' : ' '%> value="freelancer">Freelancer</option>
+                <option <%= advert.role === 'customer' ? 'selected' : ' '%> value="customer">Müşteri</option>
+            </select>
+           
+            <select name="category" id="choose-category">
+                <option   hidden  disabled value="">Kategori Seç</option>
+                <option <%= advert.category === 'Grafik & Tasarım' ? 'selected' : ' '%> value="Grafik & Tasarım">Grafik & Tasarım</option>
+                <option <%= advert.category === 'İnternet Reklamcılığı' ? 'selected' : ' '%>value="İnternet Reklamcılığı">İnternet Reklamcılığı</option>
+                <option <%= advert.category === 'Yazı & Çeviri' ? 'selected' : ' '%> value="Yazı & Çeviri" >Yazı & Çeviri</option>
+                <option <%= advert.category === 'Video & Animasyon' ? 'selected' : ' '%>value="Video & Animasyon">Video & Animasyon</option>
+                <option <%= advert.category === 'Ses & Müzik' ? 'selected' : ' '%>value="Ses & Müzik">Ses & Müzik</option>
+                <option <%= advert.category === 'Yazılım & Teknoloji' ? 'selected' : ' '%>value="Yazılım & Teknoloji">Yazılım & Teknoloji</option>
+                <option <%= advert.category === 'İş & Yönetim' ? 'selected' : ' '%>value="İş & Yönetim">İş & Yönetim</option>
+            </select>
+
+            <input id="price" value="<%= advert.title %>" name="title" type="text" placeholder="Başlık"/>
+
+            <textarea name="detail_short"  id="tanim" cols="30" rows="10" placeholder="Kısa Açıklama"><%= advert.detail_short %></textarea>
+            
+            <textarea name="detail_long"  id="tanim" cols="30" rows="10" placeholder="Uzun Açıklama"><%= advert.detail_short %></textarea>
+
+            
+            <select name="price_type" id="choose-price-type">
+                <option  selected hidden  disabled value="">Fiyatlandırma Türü Seç</option>
+                <option <%= advert.price_type === 'Dakikalık' ? 'selected' : ' '%> value="Dakikalık">Dakikalık</option>
+                <option <%= advert.price_type === 'Saatlik' ? 'selected' : ' '%> value="Saatlik">Saatlik</option>
+                <option <%= advert.price_type === 'Günlük' ? 'selected' : ' '%> value="Günlük">Günlük</option>
+                <option <%= advert.price_type === 'Adet' ? 'selected' : ' '%> value="Adet">Adet</option>
+                <option <%= advert.price_type === 'Diğer' ? 'selected' : ' '%> value="Diğer">Diğer</option>
+
+            </select>
+
+            <input id="price" value="<%= advert.price_unit %>"  name="price_unit" type="text" placeholder="Fiyat"/>
+
+           
+            <button id="olustur_butonu">Güncelle</button>
+            
+            
+
+        </form>
+    </div>
+</body>
+</html>

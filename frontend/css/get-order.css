@@ -1,0 +1,160 @@
+@import url(component.css);
+
+body{
+    background-color: var(--color-white-background);
+}
+.get-orders{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+.get-order-card{
+    background-color: var(--color-white);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25) ;
+}
+.get-order-card-top{
+    border-bottom: 1px solid var(--color-blue-light-border);
+    display: flex;
+}
+/*1*/
+.get-order-card-profile{
+    width: 190px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.get-order-card-profile img{
+    width: 60px;
+    height: 60px;
+    margin-bottom: 5px;
+
+}
+.get-order-card-profile a{
+    font-size: 1x;
+    font-weight: 600;
+    color: var(--color-blue-dark);
+}
+.get-order-card-profile a:hover{
+    text-decoration: underline;
+}
+/*2*/
+.get-order-card-advert-mid{
+    width: 620px;
+    height: 100px;
+    border-right: 1px solid var(--color-blue-light-border);
+    border-left: 1px solid var(--color-blue-light-border);
+    padding: 10px;
+}
+.get-order-card-advert-mid-title{
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--color-blue-dark);
+    margin-bottom: 3px;
+}
+.get-order-card-advert-mid-description{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-blue-light);
+}
+/*3*/
+.get-order-card-price{
+    border-right: 1px solid var(--color-blue-light-border);
+}
+.get-order-card-price{
+    width: 150px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.get-order-card-advert-calculation{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-blue-dark);
+}
+.get-order-card-advert-price{
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--color-green-light);
+}
+/*4*/
+.get-order-card-buttons-status{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 250px;
+}
+.get-order-card-order-status{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.get-order-card-order-status span{
+    margin-left: 3px;
+}
+.get-order-card-buttons{
+    display: flex;
+}
+.get-order-card-buttons a{
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-white);
+    width: 90px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    border-radius: 5px;
+}
+.get-order-card-button-detail{
+    background-color: var(--color-green-light);
+    margin-right: 8px;
+
+}
+.get-order-card-button-cancel{
+    background-color: var(--color-red);
+}
+.get-order-card-button-detail:hover{
+    background-color: var(--color-green-light-hover);
+}
+.get-order-card-button-cancel:hover{
+    background-color: var(--color-red-hover);
+}
+/*5*/
+.get-order-card-btm{
+    padding: 13px 25px;
+    position: relative;
+    min-height: 150px;
+}
+.get-order-card-btm-title{
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--color-blue-dark);
+    margin-bottom: 6px;
+}
+.get-order-card-btm-description{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-blue-light);
+    max-width: 800px;
+
+}
+.get-order-card-btm-date{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-blue-light);
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+}

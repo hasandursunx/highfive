@@ -1,0 +1,271 @@
+@import url(component.css);
+
+body{
+    background-color: var(--color-white-background);
+}
+
+/*-------------- İlan Başlık Kapsayıcısı --------------- */
+.advert-title-div{
+    padding: 10px 120px ;
+    color: var(--color-blue-dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-white);
+    
+}
+.advert-title-div h3{
+    font-weight: 400;
+    font-size: 28px;
+    color: var(--color-blue-dark);
+}
+#advert-title-favorite{
+    display: flex;
+    align-items: center;
+}
+#advert-title-favorite img{
+    width: 40px;
+    height: 40px;
+}
+#advert-title-favorite span{
+    font-weight: 400;
+    font-size: 18px;
+}
+#advert-title-favorite:hover span{
+    text-decoration: underline;
+}
+
+/* ---------------- MAIN DETAIL LEFT -------------------- */
+#advert-detail-main{
+    display: flex;
+    padding: 40px 120px;
+    justify-content: center;
+
+}
+#advert-detail-left{
+    margin-right: 50px;
+}
+#advert-detail-left-img{
+    width: 700px;
+    height: 400px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25) ;
+
+}
+#advert-detail-left-img img{
+    width: 660px;
+    height: 360px;
+    border-radius: 10px;
+}
+#advert-detail-left-description{
+    width: 700px;
+    padding: 20px 30px;
+    background-color: var(--color-white);
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25) ;
+}
+#advert-detail-left-description h2{
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--color-blue-dark);
+    margin-bottom: 15px;
+}
+#advert-detail-left-description p{
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--color-blue-light);
+    text-align: justify;
+}
+
+/* ---------------- MAIN RIGHT DETAIL -------------------- */
+#advert-detail-right{
+
+}
+#advert-detail-right-card{
+    padding: 15px 15px;
+    position: relative;
+    width: 350px;
+    background-color: var(--color-white);
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25) ;
+}
+#advert-detail-right-card-top h3{
+    color: var(--color-blue-light-card);
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 5px; 
+    max-width: 260px;
+
+}
+#advert-detail-right-card-top h4{
+    color: var(--color-blue-light);
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 12px;
+}
+
+#advert-detail-right-card-mid{
+    margin-top: 18px;
+}
+#advert-detail-right-card-mid ul li img{
+    width: 20px;
+    margin-right: 10px;
+}
+#advert-detail-right-card-mid ul li span{
+    color: var(--color-blue-light-card);
+    font-size: 16px;
+    font-weight: 300;
+    
+}
+#advert-detail-right-card-mid ul li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+#advert-detail-right-card-btm a{
+    background-color: var(--color-green-light);
+    width: 130px;
+    height: 40px;
+    display: block;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 5px;
+    color: var(--color-white);
+
+}
+#advert-detail-right-card-btm{
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+    margin-bottom: 10px;
+}
+#advert-detail-right-card-btm:hover a{
+    background-color: var(--color-green-light-hover);
+
+}
+/*price*/
+#advert-detail-right-price{
+    position: absolute;
+    top: 10Px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+#advert-detail-right-price-amount-div{
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+#advert-detail-right-price-amount{
+    font-size: 21px;
+    font-weight: 400;
+    color: var(--color-green-light);
+    line-height: 13px;
+}
+#advert-detail-right-price-amount-div span:last-child{
+    display: block;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--color-green-light);
+    line-height: 10px;
+    margin-left: 1px;
+
+}
+#advert-detail-right-price-type-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#advert-detail-right-price-type{
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--color-blue-light-card);
+    margin-left: 2px;
+    color: var(--color-red);
+}
+
+/* ---------------- MAIN RIGHT PROFİLE -------------------- */
+
+#advert-detail-right-profile{
+    margin-top: 50px;
+    width: 350px;
+    background-color: var(--color-white);
+    border-radius: 10px;
+    padding: 15px 15px;
+    position: relative;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25) ;
+}
+#advert-detail-right-profile-top{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#advert-detail-right-profile-top-avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid var(--color-blue-dark);
+    margin-bottom: 10px;
+}
+#advert-detail-right-profile-top-avatar img{
+    width: 100%;
+    height: 100%;
+}
+#advert-detail-right-profile-top-name{
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-blue-dark);
+    margin-bottom: 2px;
+}
+#advert-detail-right-profile-top-name:hover {
+    text-decoration: underline;
+}
+#advert-detail-right-profile-top-job{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-blue-light);
+    margin-bottom: 25px;
+}
+#advert-detail-right-profile-top-type-img{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 32px;
+    height: 32px;
+    background-color: var(--color-green-light) ;
+    border-radius: 50%;
+
+}
+#advert-detail-right-profile-top-type-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+#advert-detail-right-profile-mid{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+#advert-detail-right-profile-mid li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 7px;
+}
+#advert-detail-right-profile-mid li img{
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+}
+#advert-detail-right-profile-mid li span{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-blue-dark);
+}

@@ -1,0 +1,190 @@
+@import url(component.css);
+
+body{
+    background-color: var(--color-white-background);
+}
+.order-detail{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0px;
+    
+}
+#order-detail-top{
+    display: flex;
+    
+    
+}
+#order-detail-top-img {
+    width: 380px;
+    height: 235px;
+    background-color: var(--color-white);
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 20px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25) ;
+
+}
+#order-detail-top-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+#order-detail-top-description{
+    width: 630px;
+    height: 235px;
+    background-color: var(--color-white);
+    border-radius: 5px;
+    padding: 15px 25px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25) ;
+}
+#order-detail-top-description h1{
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--color-blue-dark);
+    margin-bottom: 10px;
+}
+#order-detail-top-description p{
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--color-blue-light);
+}
+
+/*-------- ORDER DETAIL MID ---------*/
+
+#order-detail-mid{
+    width: 1030px;
+    height: 110px;
+    background-color: var(--color-white);
+    margin-top: 20px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25) ;
+    display: flex;
+    padding: 0px 30px;
+    border-radius: 5px;
+    justify-content: space-between;
+    align-items: center;
+}
+#order-detail-mid-date{
+    display: flex;
+    align-items: center;
+}
+#order-detail-mid-date-stick{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 4px;
+}
+#order-detail-mid-date-time{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90px;
+}
+#order-detail-mid-date-time span{
+    font-size: 18px;
+    color: var(--color-blue-dark);
+    font-weight: 400;
+}
+#order-detail-mid-status{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#order-detail-mid-status img{
+    margin-right: 5px;
+}
+#order-detail-mid-status span{
+    font-size: 18px;
+    color: var(--color-blue-dark);
+    font-weight: 400;
+}
+/*-------- ORDER DETAIL BTM ---------*/
+#order-detail-btm{
+    display: flex;
+}
+#order-detail-btm-profile{
+    width: 840px;
+    height: 100px;
+    background-color: var(--color-white);
+    margin-top: 20px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25) ;
+    display: flex;
+    border-radius: 5px;
+}
+#order-detail-btm-profile-start{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+}
+#order-detail-btm-profile-start img{
+    width: 60px;
+    height: 60px;
+    border: 2px solid #E3EFFC;
+    border-radius: 50%;
+    margin-bottom: 5px;
+    
+}
+#order-detail-btm-profile-start a{
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--color-blue-dark);
+}
+#order-detail-btm-profile-mid h1{
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--color-blue-dark);
+    margin-bottom: 2px;
+
+}
+#order-detail-btm-profile-mid{
+    border-left: 1px solid var(--color-blue-light-border);
+    border-right: 1px solid var(--color-blue-light-border);
+    padding: 10px;
+}
+#order-detail-btm-profile-mid p{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-blue-light);
+}
+#order-detail-btm-profile-end{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+#order-detail-btm-profile-end a{
+    width: 98px;
+    height: 32px;
+    background-color: var(--color-red);
+    color: var(--color-white);
+    line-height: 32px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#order-detail-btm-price{
+    margin-top: 20px;
+    width: 170px;
+    height: 100px;
+    background-color: var(--color-white);
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25) ;
+    border-radius: 5px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+#order-detail-btm-price-type-value{
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--color-blue-dark);
+}
+#order-detail-btm-price-total{
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--color-green-light);
+}

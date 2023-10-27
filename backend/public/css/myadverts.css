@@ -1,0 +1,297 @@
+@import url(component.css);
+
+body{
+    background-color: var(--color-white-background); 
+ }
+ .ilan-card-message-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+    padding: 0px 0px;
+}
+
+.ilan-card-message-div img{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+.ilan-cards{
+    padding: 40px 100px;
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+.ilan-card{
+    width: 400px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+    border-radius: 5px;
+    background-color: var(--color-white);
+}
+.ilan-card-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+.ilan-card-top-profile{
+    display: flex;
+    align-items: center;
+    width: 500px;
+}
+.ilan-card-mid{
+  padding: 0px 10px;
+}
+
+.ilan-card-top-profile-text p {
+  overflow-wrap: break-word;
+  font-size: 18px;
+  
+}
+.ilan-card-top-profile span{
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color-blue-light-border);
+}
+
+.line{
+  width: 100%; height: 1px; border: 1px solid rgb(178, 178, 178);
+  margin: 10px 0px;
+}
+
+
+.ilan-card-top-profile a{
+
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--color-blue-dark);
+}
+.ilan-card-top-profile a:hover{
+    text-decoration: underline;
+    width: 400px;
+}
+
+.ilan-card-top-profile img:first-child{
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+}
+.ilan-card-mid img{
+    width: 300px;
+}
+.ilan-card-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.ilan-card-bottom #sil{
+    color: var(--color-white);
+    font-size: 18px;
+    width: 108px;
+    height: 35px;
+    border-radius: 5px;
+    background-color: var(--color-red);
+    display: block;
+    line-height: 35px;
+    text-align: center;
+    margin-left: 15px;
+}
+.ilan-card-bottom #duzenle{
+    color: var(--color-white);
+    font-size: 18px;
+    width: 108px;
+    height: 35px;
+    border-radius: 5px;
+    background-color: var(--color-green-light);
+    display: block;
+    line-height: 35px;
+    text-align: center;
+}
+
+#duzenle:hover{
+    background-color: var(--color-green-light-hover);
+}
+#sil:hover{
+    background-color: var(--color-red-hover);
+}
+/*CONFIRM POPUP*/
+
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+
+  
+  a {
+    color: #35a785;
+    text-decoration: none;
+  }
+  
+  /* -------------------------------- 
+  
+  Modules - reusable parts of our design
+  
+  -------------------------------- */
+  .img-replace {
+    /* replace text with an image */
+    display: inline-block;
+    overflow: hidden;
+    text-indent: 100%;
+    color: transparent;
+    white-space: nowrap;
+  }
+  
+  /* -------------------------------- 
+  
+  Main components 
+  
+  -------------------------------- */
+  header {
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+    background-color: #5e6e8d;
+    color: #FFF;
+  }
+  header h1 {
+    font-size: 20px;
+    font-size: 1.25rem;
+  }
+  
+  .cd-popup-trigger {
+    display: block;
+    width: 170px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #FFF;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    border-radius: 50em;
+    background: #35a785;
+    box-shadow: 0 3px 0 rgba(0, 0, 0, 0.07);
+  }
+  
+  
+  /* -------------------------------- 
+  
+  xpopup 
+  
+  -------------------------------- */
+  .cd-popup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(94, 110, 141, 0.9);
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+    -moz-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+    transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  }
+  .cd-popup.is-visible {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: opacity 0.3s 0s, visibility 0s 0s;
+    -moz-transition: opacity 0.3s 0s, visibility 0s 0s;
+    transition: opacity 0.3s 0s, visibility 0s 0s;
+  }
+  
+  .cd-popup-container {
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    margin: 4em auto;
+    background: #FFF;
+    border-radius: .25em .25em .4em .4em;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    -webkit-transform: translateY(-40px);
+    -moz-transform: translateY(-40px);
+    -ms-transform: translateY(-40px);
+    -o-transform: translateY(-40px);
+    transform: translateY(-40px);
+    
+  }
+  .cd-popup-container p {
+    padding: 3em 1em;
+  }
+  .cd-popup-container .cd-buttons:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .cd-popup-container .cd-buttons li {
+    float: left;
+    width: 50%;
+  }
+  .cd-popup-container .cd-buttons a {
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    color: #FFF;
+    -webkit-transition: background-color 0.2s;
+    -moz-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+  }
+  .cd-popup-container .cd-buttons li:first-child a {
+    background: #fc7169;
+    border-radius: 0 0 0 .25em;
+  }
+  .no-touch .cd-popup-container .cd-buttons li:first-child a:hover {
+    background-color: #fc8982;
+  }
+  .cd-popup-container .cd-buttons li:last-child a {
+    background: #b6bece;
+    border-radius: 0 0 .25em 0;
+  }
+  .no-touch .cd-popup-container .cd-buttons li:last-child a:hover {
+    background-color: #c5ccd8;
+  }
+  .cd-popup-container .cd-popup-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+  }
+  .cd-popup-container .cd-popup-close::before, .cd-popup-container .cd-popup-close::after {
+    content: '';
+    position: absolute;
+    top: 12px;
+    width: 14px;
+    height: 3px;
+    background-color: #8f9cb5;
+  }
+  .cd-popup-container .cd-popup-close::before {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    left: 8px;
+  }
+  .cd-popup-container .cd-popup-close::after {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    right: 8px;
+  }
+  .is-visible .cd-popup-container {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+  }
+  
+  

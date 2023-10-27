@@ -1,0 +1,216 @@
+@import url(component.css);
+
+body{
+    background-color: var(--color-white-background);
+}
+
+/* ----------------------- FILTER ----------- */
+.filter{
+    padding: 15px 120px;
+    background-color: var(--color-white);
+    
+}
+.filter form{
+    display: flex;
+    align-items: center;
+}
+.filter select{
+    width: 200px;
+    height: 40px;
+    font-size: 16px;
+    padding: 5px 12px;
+    border: 1px solid var(--color-blue-light-border);
+    border-radius: 5px;
+    color: var(--color-blue-dark);
+    margin-right: 20px;
+}
+
+.filter input{
+    width: 80px;
+    height: 40px;
+    font-size: 16px;
+    padding: 5px 12px;
+    border: 1px solid var(--color-blue-light-border);
+    border-radius: 5px;
+    color: var(--color-blue-dark);
+}
+.filter select:hover{
+    border: 1px solid var(--color-blue-light);
+    cursor: pointer;
+}
+.filter select:hover{
+    border: 1px solid var(--color-blue-light);
+}
+
+#min-price-text{
+    margin-right: 5px;
+    margin-left: 10px;
+    min-width: 100px;
+}
+#max-price-text{
+    margin: 0px 8px ;
+}
+
+.filter button{
+    width: 100px;
+    height: 35px;
+    background-color: var(--color-blue-dark);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-left: 30px;
+
+}
+
+
+
+/* ---------- ADVERT CARD ---------------- */
+
+.main{
+    padding: 30px 120px;
+    min-height: 800px;
+}
+
+.advert-cards{
+    display: flex;
+    gap: 35px;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+
+.advert-card:hover{
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.25) ;
+
+}
+
+.advert-card{
+    width: 300px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+    border-radius: 5px;
+}
+/* pozisyon ayarlama */
+.advert-card-img{
+    position: relative;
+    
+}
+.advert-card-avatar-img{
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    background-color: var(--color-red);
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    border: 1px solid var(--color-blue-dark);
+    overflow: hidden;
+    
+}
+
+.advert-card-avatar-img img{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    
+}
+/*-----------------*/
+.advert-card-big-img{
+    width: 300px;
+    height: 150px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+
+/* resim isim ve fiyatlandırma */
+
+.advert-card-profile{
+    padding: 10px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--color-blue-light-border);
+
+
+}
+
+.advert-card-profile img{
+    width: 38px;
+    height: 38px;
+    margin-right:6px;
+}
+
+
+.advert-card-profile-name{
+    display: flex;
+}
+
+.advert-card-profile-info p{
+    color: var(--color-blue-light);
+    font-weight: 300;
+    letter-spacing: -0.5;
+    font-size: 13px;
+}
+
+.advert-card-profile-info a:hover{
+    text-decoration: underline;
+}
+
+.advert-card-profile-price{
+    text-align: right;
+    align-self:flex-end;
+}
+.advert-card-profile-price p:first-child{
+    color: var(--color-green-light);
+    font-size: 24px;
+    line-height: 10px;
+}
+
+.advert-card-profile-price p:first-child span{
+    font-size: 10px;
+}
+
+.advert-card-profile-price p:last-child{
+    color: var(--color-blue-light);
+    font-size: 11px;
+
+}
+.advert-card-text{
+    padding: 10px;
+    height: 120px;
+    overflow: hidden;
+}
+.advert-card-text p{
+    font-size: 16px ;
+    font-weight: 400;
+    color: var(--color-blue-dark);
+}
+
+.advert-card-button{
+    border-top: 1px solid var(--color-blue-light-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+.advert-card-button a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.advert-card-button a span {
+    margin-right: 10px;
+}
+
+.advert-card-button img {
+    width: 23px;
+    height: 23px;
+}
+.advert-card-button a:hover{
+    text-decoration: underline;
+}
+

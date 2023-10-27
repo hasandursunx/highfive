@@ -1,0 +1,125 @@
+@import url(component.css);
+
+#create-div form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#create-div{
+    padding: 25px 0px;
+    margin-bottom: 50px;
+}
+#rol-sec{
+    border-radius: 2px;
+    border: 1px solid #bfc8d2;
+    width: 365px;
+    height: 41px;
+    padding: 9px 10px 11px;
+    color: #2d3640;
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 30px;
+    transition: 0.5s border;
+
+}
+#rol-sec:focus{
+    border-color: var(--color-blue-dark);
+}
+#kategori-sec{
+    border-radius: 2px;;
+    border: 1px solid #bfc8d2;
+    width: 365px;
+    height: 41px;
+    padding: 9px 10px 11px;
+    color: #2d3640;
+    font-weight: 400;
+    font-size: 16px;
+    transition: 0.5s border;
+    margin-bottom: 30px;
+
+}
+#kategori-sec:focus{
+    border-color: var(--color-blue-dark);
+}
+#baslik{
+    border-radius: 2px;
+    border: 1px solid #bfc8d2;
+    width: 365px;
+    height: 41px;
+    padding: 9px 10px 11px;
+    color: #2d3640;
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 30px;
+    transition: 0.5s border;
+
+}
+#baslik:focus{
+    border-color: var(--color-blue-dark);
+}
+#tanim{
+    border-radius: 2px;
+    border: 1px solid #bfc8d2;
+    width: 365px;
+    height: 100px;
+    padding: 5px 10px 11px;
+    color: #2d3640;
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 30px;
+    transition: 0.5s border;
+
+}
+#tanim:focus{
+    border-color: var(--color-blue-dark);
+}
+#olustur_butonu{
+    border-radius: 2px;
+    height: 41px;
+    width: 200px;
+    background-color: var(--color-green-light);
+    color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+    
+}
+#olustur_butonu:hover{
+    background-color: var(--color-green-light-hover);
+}
+select{
+    border-radius: 2px;
+    border: 1px solid #bfc8d2;
+    width: 365px;
+    height: 41px;
+    padding: 9px 10px 11px;
+    color: #2d3640;
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 30px;
+    transition: 0.5s border;
+
+}
+select:focus{
+    border-color: var(--color-blue-dark);
+}
+textarea{
+    max-width: 365px;
+    min-width: 365px;
+}
+#price{
+    border-radius: 2px;
+    border: 1px solid #bfc8d2;
+    width: 365px;
+    height: 41px;
+    padding: 9px 10px 11px;
+    color: #2d3640;
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 30px;
+    transition: 0.5s border;
+
+}
+#price:focus{
+    border-color: var(--color-blue-dark);
+}

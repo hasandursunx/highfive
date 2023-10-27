@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/user.css">
+    <title>Profil</title>
+</head>
+<body>
+    <!--HEADER-->
+    <%- include('partials/_header') %>
+    <!--PROFİLE-->
+    <div class="profile">
+        <div id="profile-left">
+            <div id="profile-left-profile">
+                <div id="profile-left-profile-top">
+                    <div id="profile-left-profile-top-avatar">
+                        <img src="/img/avatar/profile-1.png" alt="">
+                    </div>
+                    <a href="#" id="profile-left-profile-top-name"><%= user.name + " " + " " + user.surname%></a>
+                    <div id="profile-left-profile-top-job"><%= user.job %></div>
+                    <div class="line"></div>
+                    <div id="profile-left-profile-top-type-img">
+                        <img src="/img/avatar/customer.png" alt="">
+                    </div>
+                </div>
+                <div id="profile-left-profile-mid">
+                    <ul>
+                        <li><img src="/img/icon/profile/gender.svg" alt=""><span><%= user.gender %></span></li>
+                        <li><img src="/img/icon/profile/birtday.svg" alt=""><span><%= user.age %></span></li>
+                        <li><img src="/img/icon/profile/language.svg" alt=""><span><%= user.language %></span></li>
+                        <li><img src="/img/icon/profile/username.svg" alt=""><span><%= user.username %></span></li>
+                        <li><img src="/img/icon/profile/email.svg" alt=""><span> <%= user.email  %> </span></li>
+                    </ul> 
+                </div>
+            </div>
+            <div id="profile-left-career"></div>
+        </div>
+        <div id="profile-right">
+            <div id="profile-right-about">
+                <h3>Hakkımda</h3>
+                <p>
+                    <%= user.aboutme %>
+                    
+                </p>
+            </div>
+            <div id="profile-right-profile-detail">
+                <ul id="profile-right-profile-detail-left">
+                    <li style="overflow-wrap: break-word;"><span>Meslek : </span> <%= user.job %></p></li>
+                    <li style="overflow-wrap: break-word;"><span>Deneyim : </span>  <%= user.experience_year %></li>
+                    <li style="overflow-wrap: break-word;"><span>Yetenekler : </span> <%= user.talents %> </li>
+                    <li style="overflow-wrap: break-word;"><span>Sertifikalar : </span>  <%= user.certificates %></p> </li>
+                    <li style="overflow-wrap: break-word;"> <span>Hobiler : </span>   <%= user.hobbies %> </li>
+                </ul> 
+            </div>
+        </div>
+    </div>
+    <h1  class="title">İLANLAR</h1>
+    <div class="adverts">
+        <% for(advert of adverts) {%>
+            <div class="ilan-card">
+                <div class="ilan-card-top">
+                    <div class="ilan-card-top-profile">
+                        <img style="border-radius: 50%; object-fit : cover;" src="/img/other/ilan-2.jpeg" alt="">
+                        <div style="width: 200px;" class="ilan-card-top-profile-text">
+                            <a style="text-decoration: none;  overflow-wrap: break-word;" href="#"><%= advert.title %></a>
+                            <span><%= advert.category %></span>
+                        </div>
+                    </div>
+                    
+
+                </div>
+
+                <div class="ilan-card-mid">
+                    <img src="/img/other/ilan-2.jpeg" alt="">
+
+                </div>
+            </div>
+        <% } %>
+    </div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="7px" viewBox="0 0 10 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>Combined Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="SaaS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="//Fixed-Header" transform="translate(-1218.000000, -83.000000)" fill="#BFC8D2">
+            <g id="Platform-selection" transform="translate(0.000000, 60.000000)">
+                <g id="Feed" transform="translate(960.000000, 0.000000)">
+                    <g id="Group-18" transform="translate(213.000000, 17.000000)">
+                        <path d="M52.3877274,9.18712029 C52.6238156,9.57255611 52.5749258,10.0834393 52.2483982,10.4099669 C52.2483982,10.4099669 51.8645701,10.793795 51.6232361,11.035129 L48.8234559,13.8349092 C48.4352638,14.2231013 47.8067121,14.2239333 47.4134652,13.8306863 C47.0229409,13.4401621 47.023165,12.806773 47.4188095,12.4111285 L50.2063584,9.62357956 L47.2974891,6.71471027 C46.9018447,6.31906581 46.9016206,5.68567673 47.2921448,5.29515244 C47.6853918,4.90190548 48.3139435,4.90273752 48.7021356,5.2909296 L51.5019157,8.09070975 C51.7432498,8.33204378 52.1270779,8.71587191 52.1270779,8.71587191 C52.2604428,8.84923687 52.3474927,9.01335573 52.3877274,9.18712029 Z" id="Combined-Shape" transform="translate(49.767471, 9.562919) rotate(-270.000000) translate(-49.767471, -9.562919) "></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

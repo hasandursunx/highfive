@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teklif Ver</title>
+    <link rel="stylesheet" href="/css/createOffer.css">
+
+</head>
+<body>
+     <!--HEADER-->
+     
+     <%- include('partials/_header') %>
+
+        <div id="give-offer-div">
+            
+            <form action="/profile/offers/<%= advert._id %>/<%= ownerId %>" method="POST"> 
+                <div class="to-orders">
+                <input name="title" id="baslik" type="text" placeholder="Başlık"/>
+               
+                <input wrap="hard" name="description" id="tanim" type="text" placeholder="İş tanımı"/>
+                <div id="tutar">
+            
+                <select name="price_type" id="choose-price-type">
+                    <option  selected hidden  disabled value="">Fiyatlandırma Türü Seç</option>
+                    <option value="Dakikalık">Dakikalık</option>
+                    <option value="Saatlik">Saatlik</option>
+                    <option value="Günlük">Günlük</option>
+                    <option value="Adet">Adet</option>
+                    <option value="Diğer">Diğer</option>
+    
+                </select>
+                
+                <input id="ucret" name="price_unit"  type="number" placeholder="600TL"/>
+                <input id="sure" name="price_unit_count"  type="number" placeholder="3 saat"/>
+                    
+        
+                    </div>
+               
+                <button id="siparis_butonu">Teklif Ver</button>
+                
+             
+    
+            </form>
+        </div>
+
+</body>
+</html>
